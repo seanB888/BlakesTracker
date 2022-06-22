@@ -23,6 +23,8 @@ struct DetailLoadingView: View {
 struct DetailView: View {
     
     @StateObject private var vm: DetailViewModel
+    @State private var showFullDescription: Bool = false
+    
     private let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -31,28 +33,36 @@ struct DetailView: View {
     
     init(coin: CoinModel) {
         _vm = StateObject(wrappedValue: DetailViewModel(coin: coin))
-        // print("Initializing Detail View for \(coin.name)")
     }
     
     var body: some View {
         ScrollView {
             VStack {
                 ChartView(coin: vm.coin)
-                    .padding(.vertical)
+                    .padding(.vertical, 1)
                 
                 VStack(spacing: 20) {
                     
                     // Overview title
                     overviewTitle
                     Divider()
+                    
+                    // Description
+                    descriptionSection
+                    
                     // Grid area
                     overviewGrid
                     
                     // Additional title
                     addtionalTitle
+                    
                     Divider()
                     // Grid area
                     additionalGrid
+                    
+                    // web links
+                    websiteSection
+                  
                     
                 }
                 .padding()
@@ -72,6 +82,7 @@ struct DetailView_Previews: PreviewProvider {
         NavigationView {
             DetailView(coin: dev.coin)
         }
+        
         
     }
 }
@@ -105,6 +116,33 @@ extension DetailView {
             .frame(maxWidth: .infinity, alignment: .leading)
     }
     
+    private var descriptionSection: some View {
+        ZStack {
+            if let coinDescription = vm.coinDescription, !coinDescription.isEmpty {
+                VStack(alignment: .leading) {
+                    Text(coinDescription)
+                        .lineLimit(showFullDescription ? nil : 3)
+                        .font(.callout)
+                        .foregroundColor(Color.theme.secondaryText)
+                    
+                    Button {
+                        withAnimation(.easeInOut) {
+                            showFullDescription.toggle()
+                        }
+                    } label: {
+                        Text(showFullDescription ? "Show less" : "Learn more...")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                            .padding(.vertical, 1)
+                    }
+                    .accentColor(.blue)
+
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
+    }
+    
     private var overviewGrid: some View {
         LazyVGrid(
             columns: columns,
@@ -129,5 +167,22 @@ extension DetailView {
                     StatisticView(stat: stat)
                 }
             })
+    }
+    
+    private var websiteSection: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            if let websiteString = vm.websiteURL,
+               let url = URL(string: websiteString) {
+                Link(vm.coin.name.uppercased() + " Home Page", destination: url)
+            }
+            
+            if let websiteString = vm.redditURL,
+               let url = URL(string: websiteString) {
+                Link("Reddit", destination: url)
+            }
+        }
+        .accentColor(Color.blue)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .font(.headline)
     }
 }

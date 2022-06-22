@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio: Bool = false // animates to the right
     @State private var showPortfolioView: Bool = false // shows a new sheet
@@ -27,10 +28,11 @@ struct HomeView: View {
 
             // content layer...
             VStack {
+                // info button and nav button...
                 homeHeader
-
+                // stats area (marketCap, Volume, BTC Dominance)...
                 HomeStatsView(showPortfolio: $showPortfolio)
-
+                // search bar...
                 SearchBarView(searchText: $vm.searchText)
 
                 columnTitles

@@ -11,6 +11,9 @@ import Combine
 class DetailViewModel: ObservableObject {
     @Published var overviewStatistics: [StatisticModel] = []
     @Published var additionalStatistics: [StatisticModel] = []
+    @Published var coinDescription: String? = nil
+    @Published var websiteURL: String? = nil
+    @Published var redditURL: String? = nil
 
     @Published var coin: CoinModel
     private let coinDetailService: CoinDetailDataService
@@ -33,14 +36,22 @@ class DetailViewModel: ObservableObject {
                 self?.additionalStatistics = returnedArrays.addtional
             }
             .store(in: &cancellables)
+        
+        coinDetailService.$coinDetails
+            .sink { [weak self] (returnedCoinDetails) in
+                self?.coinDescription = returnedCoinDetails?.readdableDescription
+                self?.websiteURL = returnedCoinDetails?.links?.homepage?.first
+                self?.redditURL = returnedCoinDetails?.links?.subredditURL
+            }
+            .store(in: &cancellables)
     }
     
-    private func mapDataToStatics(CoinDetailModel: CoinDetailModel?, coinModel: CoinModel) -> (overview: [StatisticModel], addtional: [StatisticModel]) {
+    private func mapDataToStatics(coinDetailModel: CoinDetailModel?, coinModel: CoinModel) -> (overview: [StatisticModel], addtional: [StatisticModel]) {
         // overview
         let overviewArray = createOverviewArray(coinModel: coinModel)
         
         // additional
-        let additionalArray = createAdditionalArray(coinDetailModel: CoinDetailModel, coinModel: coinModel)
+        let additionalArray = createAdditionalArray(coinDetailModel: coinDetailModel, coinModel: coinModel)
         
         return (overviewArray, additionalArray)
     }

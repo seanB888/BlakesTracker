@@ -26,6 +26,7 @@ struct ChartView: View {
         let priceChange = (data.last ?? 0) - (data.first ?? 0)
         lineColor = priceChange > 0 ? Color.theme.green : Color.theme.red
         
+        // dates at bottom
         endingDate = Date(coinGeckoString: coin.lastUpdated ?? "")
         startingDate = endingDate.addingTimeInterval(-7*24*60*60)
     }
@@ -43,8 +44,8 @@ struct ChartView: View {
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                withAnimation(.linear(duration: 3.0)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                withAnimation(.linear(duration: 2.0)) {
                     percentage = 1.0
                 }
             }
@@ -69,7 +70,7 @@ extension ChartView {
                     
                     let yAxis = maxY - minY
                     
-                    let yPosition = (1 - (data[index] - minY) / yAxis) * geometry.size.height
+                    let yPosition = (1 - CGFloat((data[index] - minY) / yAxis)) * geometry.size.height
                     
                     if index == 0 {
                         path.move(to: CGPoint(x: xPosition, y: yPosition))
@@ -79,10 +80,10 @@ extension ChartView {
             }
             .trim(from: 0, to: percentage)
             .stroke(lineColor, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-            .shadow(color: lineColor, radius: 3, x: 0.0, y: 5)
-            .shadow(color: lineColor.opacity(0.5), radius: 3, x: 0.0, y: 10)
-            .shadow(color: lineColor.opacity(0.2), radius: 3, x: 0.0, y: 20)
-            .shadow(color: lineColor.opacity(0.1), radius: 3, x: 0.0, y: 30)
+//            .shadow(color: lineColor, radius: 3, x: 0.0, y: 5)
+//            .shadow(color: lineColor.opacity(0.5), radius: 3, x: 0.0, y: 10)
+//            .shadow(color: lineColor.opacity(0.2), radius: 3, x: 0.0, y: 20)
+//            .shadow(color: lineColor.opacity(0.1), radius: 3, x: 0.0, y: 30)
         }
     }
     

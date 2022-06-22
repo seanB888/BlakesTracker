@@ -44,6 +44,8 @@
 		04D3AEFE283332C1002A15BB /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3AEFD283332C1002A15BB /* UIApplication.swift */; };
 		04DA633E283CB8A30090E161 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA633D283CB8A30090E161 /* PortfolioView.swift */; };
 		04DA6341283CBC4F0090E161 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA6340283CBC4F0090E161 /* CloseButton.swift */; };
+		1F0180232861D6BF00624C56 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0180222861D6BF00624C56 /* String.swift */; };
+		1F0335032862BFC6009C28D6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0335022862BFC6009C28D6 /* SettingsView.swift */; };
 		1F9AC21A285ED05300B1A252 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9AC219285ED05300B1A252 /* ChartView.swift */; };
 		1F9AC21C286016A200B1A252 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9AC21B286016A200B1A252 /* Date.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,8 @@
 		04D3AEFD283332C1002A15BB /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		04DA633D283CB8A30090E161 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		04DA6340283CBC4F0090E161 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		1F0180222861D6BF00624C56 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		1F0335022862BFC6009C28D6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1F9AC219285ED05300B1A252 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		1F9AC21B286016A200B1A252 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +202,7 @@
 				045B61C4282EDB5C00579D38 /* Double.swift */,
 				04D3AEFD283332C1002A15BB /* UIApplication.swift */,
 				1F9AC21B286016A200B1A252 /* Date.swift */,
+				1F0180222861D6BF00624C56 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 		048D566C282DBBA60045C348 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1F0335002862BF95009C28D6 /* Settings */,
 				048D5672282DBCF20045C348 /* Components */,
 				048D566D282DBBAD0045C348 /* Home */,
 				0418B256285C1E0800C32E13 /* Detail */,
@@ -298,6 +304,22 @@
 				04DA6340283CBC4F0090E161 /* CloseButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		1F0335002862BF95009C28D6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1F0335012862BFAE009C28D6 /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		1F0335012862BFAE009C28D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F0335022862BFC6009C28D6 /* SettingsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +420,7 @@
 				047BCD94283ADCB4003E0D23 /* MarketDataService.swift in Sources */,
 				04D3AEF82832BAAF002A15BB /* CoinImageViewModel.swift in Sources */,
 				045B61C3282EB30500579D38 /* PreviewProvider.swift in Sources */,
+				1F0180232861D6BF00624C56 /* String.swift in Sources */,
 				045B61C5282EDB5C00579D38 /* Double.swift in Sources */,
 				04DA633E283CB8A30090E161 /* PortfolioView.swift in Sources */,
 				04D3AEF62832B410002A15BB /* CoinImageService.swift in Sources */,
@@ -407,6 +430,7 @@
 				043346A4285CF95E00518822 /* CoinDetailDataService.swift in Sources */,
 				043346A2285CF92B00518822 /* DetailViewModel.swift in Sources */,
 				043A81752854F84F0088DFE9 /* PortfolioDataService.swift in Sources */,
+				1F0335032862BFC6009C28D6 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
