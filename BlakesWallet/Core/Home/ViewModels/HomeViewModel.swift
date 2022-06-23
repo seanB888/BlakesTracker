@@ -10,13 +10,9 @@ import Combine
 import UIKit
 
 class HomeViewModel: ObservableObject {
-//    @Published var statistics: [StatisticModel] = [
-//        StatisticModel(title: "Tile", value: "Value", percentageChange: 5),
-//        StatisticModel(title: "Tile", value: "Value"),
-//        StatisticModel(title: "Tile", value: "Value"),
-//        StatisticModel(title: "Tile", value: "Value", percentageChange: -5)
-//    ]
+    
     @Published var statistics: [StatisticModel] = []
+    
     @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
     @Published var isLoading: Bool = false

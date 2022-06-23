@@ -9,23 +9,27 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @Environment(\.presentationMode) var closeButtonAction
+    
     let defaultURL = URL(string: "https://ucleus.co")!
     let support = URL(string: "https://ucleus.co/contact")!
     let personalURL = URL(string: "https://seanblake.info")!
     let coingecko = URL(string: "https://www.coingecko.com/")!
     let coingeckoFacebook = URL(string: "https://www.facebook.com/coingecko")!
-    let discord = URL(string: "https://discord.com/")!
+    let discord = URL(string: "https://discord.gg/ZJs8aXd4KA")!
     let twitter = URL(string: "https://twitter.com/ucleus")!
     let github = URL(string: "https://github.com/seanB888")!
     
     var body: some View {
         NavigationView {
             List {
-                ucleusSection
+                blakesWalletSection
                 // coinGecko section
                 coinGeckoSection
                 // section about me
                 developerSection
+                // company section
+                applicationSection
             }
             .font(.headline)
             .accentColor(.blue)
@@ -33,7 +37,12 @@ struct SettingsView: View {
             .navigationTitle("Settings")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        CloseButton()
+                        Button {
+                            closeButtonAction.wrappedValue.dismiss()
+                        } label: {
+                            Image(systemName: "xmark")
+                        }
+
                     }
                 }
         }
@@ -49,8 +58,8 @@ struct SettingsView_Previews: PreviewProvider {
 
 extension SettingsView {
     
-    private var ucleusSection: some View {
-        Section(header: Text("Ucleus")) {
+    private var blakesWalletSection: some View {
+        Section(header: Text("Blakes Wallet")) {
             VStack(alignment: .leading) {
                 
                 Image("logo")
@@ -63,9 +72,7 @@ extension SettingsView {
                     .foregroundColor(Color.theme.accent)
             }
             .padding(.vertical)
-            Link("About Ucleus", destination: defaultURL)
-            Link("Meet the developer", destination: personalURL)
-            Link("Need support", destination: support)
+            Link("support", destination: support)
         }
     }
     
@@ -110,6 +117,27 @@ extension SettingsView {
             Link("Resume", destination: personalURL)
             Link("Descord", destination: discord)
             Link("Github", destination: github)
+        }
+    }
+    
+    private var applicationSection: some View {
+        
+        Section(header: Text("Application")) {
+            VStack(alignment: .leading) {
+                HStack {
+                    Image("profile")
+                        .resizable()
+                        .frame(width: 105, height: 100)
+                    .clipShape(Circle())
+                    
+                    Text("Ucleus")
+                }
+            }
+            .padding(.vertical)
+            Link("Company Website", destination: defaultURL)
+            Link("Terms of Services", destination: defaultURL)
+            Link("Privacy Policy", destination: defaultURL)
+            Link("Learn More", destination: defaultURL)
         }
     }
     
