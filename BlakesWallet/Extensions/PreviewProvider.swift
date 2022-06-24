@@ -49,7 +49,7 @@ extension PreviewProvider {
 class DeveloperPreview {
     // a singleton...
     static let instance = DeveloperPreview()
-    // private so we will never 2 DeveloperPreview() instance
+    // private so we will never have 2 DeveloperPreview() instance
     private init() { }
 
     let homeVM = HomeViewModel()

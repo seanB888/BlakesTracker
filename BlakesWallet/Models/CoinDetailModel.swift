@@ -22,6 +22,7 @@ struct CoinDetailModel: Codable {
         case hashingAlgorithm = "hashing_algorithm"
     }
     
+    //MARK: Used to remove the HTML links from the discription
     var readdableDescription: String? {
         return description?.en?.removingHTMLOccurances
     }

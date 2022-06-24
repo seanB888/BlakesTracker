@@ -148,11 +148,11 @@
 			isa = PBXGroup;
 			children = (
 				045B61C92831E7EC00579D38 /* CoinDataServices.swift */,
+				043346A3285CF95E00518822 /* CoinDetailDataService.swift */,
 				04D3AEF52832B410002A15BB /* CoinImageService.swift */,
 				04D3AEF928330D51002A15BB /* localFileManager.swift */,
 				047BCD93283ADCB4003E0D23 /* MarketDataService.swift */,
 				043A81742854F84F0088DFE9 /* PortfolioDataService.swift */,
-				043346A3285CF95E00518822 /* CoinDetailDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -176,12 +176,12 @@
 		048D565A282DB56B0045C348 /* BlakesWallet */ = {
 			isa = PBXGroup;
 			children = (
-				043346A5285D020C00518822 /* SeanSnippets */,
-				04D3AEEE28329BDE002A15BB /* Utilities */,
-				045B61C82831E7D300579D38 /* Services */,
-				048D5678282DFAC30045C348 /* Models */,
 				048D566C282DBBA60045C348 /* Core */,
 				048D5669282DB8380045C348 /* Extensions */,
+				048D5678282DFAC30045C348 /* Models */,
+				043346A5285D020C00518822 /* SeanSnippets */,
+				045B61C82831E7D300579D38 /* Services */,
+				04D3AEEE28329BDE002A15BB /* Utilities */,
 				048D565B282DB56B0045C348 /* BlakesWalletApp.swift */,
 				048D565D282DB56B0045C348 /* ContentView.swift */,
 				048D565F282DB56F0045C348 /* Assets.xcassets */,
@@ -202,11 +202,11 @@
 			isa = PBXGroup;
 			children = (
 				048D566A282DB8520045C348 /* Color.swift */,
-				045B61C2282EB30500579D38 /* PreviewProvider.swift */,
-				045B61C4282EDB5C00579D38 /* Double.swift */,
-				04D3AEFD283332C1002A15BB /* UIApplication.swift */,
 				1F9AC21B286016A200B1A252 /* Date.swift */,
+				045B61C4282EDB5C00579D38 /* Double.swift */,
+				045B61C2282EB30500579D38 /* PreviewProvider.swift */,
 				1F0180222861D6BF00624C56 /* String.swift */,
+				04D3AEFD283332C1002A15BB /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,11 +214,11 @@
 		048D566C282DBBA60045C348 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				048D5672282DBCF20045C348 /* Components */,
+				0418B256285C1E0800C32E13 /* Detail */,
+				048D566D282DBBAD0045C348 /* Home */,
 				1F44098D28646EEA00D5859D /* Launch */,
 				1F0335002862BF95009C28D6 /* Settings */,
-				048D5672282DBCF20045C348 /* Components */,
-				048D566D282DBBAD0045C348 /* Home */,
-				0418B256285C1E0800C32E13 /* Detail */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -277,8 +277,8 @@
 			children = (
 				048D5679282DFAE00045C348 /* CoinModel.swift */,
 				0433469F285CF1BF00518822 /* CoinDetailModel.swift */,
-				045727DD283434A8009FC1B9 /* StatisticModel.swift */,
 				047BCD91283AC6B0003E0D23 /* MarketDataModel.swift */,
+				045727DD283434A8009FC1B9 /* StatisticModel.swift */,
 				043A81712854F76A0088DFE9 /* PortfolioContainer.xcdatamodeld */,
 			);
 			path = Models;
@@ -287,8 +287,8 @@
 		04D3AEEE28329BDE002A15BB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				04D3AEF028329CB5002A15BB /* NetworkingManager.swift */,
 				0458DB73285AD02E009F4262 /* HapticManager.swift */,
+				04D3AEF028329CB5002A15BB /* NetworkingManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -604,7 +604,7 @@
 				PRODUCT_NAME = "Blakes Tracker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -635,7 +635,7 @@
 				PRODUCT_NAME = "Blakes Tracker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
