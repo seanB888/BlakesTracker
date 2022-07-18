@@ -22,9 +22,9 @@ struct ChartView: View {
         data = coin.sparklineIn7D?.price ?? []
         maxY = data.max() ?? 0
         minY = data.min() ?? 0
-        
+        // Chart colors
         let priceChange = (data.last ?? 0) - (data.first ?? 0)
-        lineColor = priceChange > 0 ? Color.theme.green : Color.theme.red
+        lineColor = priceChange > 0 ? .green : .red
         
         // dates at bottom
         endingDate = Date(coinGeckoString: coin.lastUpdated ?? "")
@@ -56,6 +56,7 @@ struct ChartView: View {
 struct ChartView_Previews: PreviewProvider {
     static var previews: some View {
         ChartView(coin: dev.coin)
+            .preferredColorScheme(.dark)
     }
 }
 
@@ -79,7 +80,7 @@ extension ChartView {
                 }
             }
             .trim(from: 0, to: percentage)
-            .stroke(lineColor, style: StrokeStyle(lineWidth: 1, lineCap: .round, lineJoin: .round))
+            .stroke(lineColor, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
 //            .shadow(color: lineColor, radius: 3, x: 0.0, y: 5)
 //            .shadow(color: lineColor.opacity(0.5), radius: 3, x: 0.0, y: 10)
 //            .shadow(color: lineColor.opacity(0.2), radius: 3, x: 0.0, y: 20)

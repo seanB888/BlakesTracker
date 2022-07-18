@@ -29,7 +29,7 @@ struct SettingsView: View {
                 // section about me
                 developerSection
                 // company section
-                applicationSection
+                // applicationSection
             }
             .font(.headline)
             .accentColor(.blue)
@@ -120,25 +120,25 @@ extension SettingsView {
         }
     }
     
-    private var applicationSection: some View {
-        
-        Section(header: Text("Application")) {
-            VStack(alignment: .leading) {
-                HStack {
-                    Image("profile")
-                        .resizable()
-                        .frame(width: 105, height: 100)
-                    .clipShape(Circle())
-                    
-                    Text("Ucleus")
-                }
-            }
-            .padding(.vertical)
-            Link("Company Website", destination: defaultURL)
-            Link("Terms of Services", destination: defaultURL)
-            Link("Privacy Policy", destination: defaultURL)
-            Link("Learn More", destination: defaultURL)
-        }
-    }
+//    private var applicationSection: some View {
+//
+//        Section(header: Text("Application")) {
+//            VStack(alignment: .leading) {
+//                HStack {
+//                    Image("profile")
+//                        .resizable()
+//                        .frame(width: 105, height: 100)
+//                    .clipShape(Circle())
+//
+//                    Text("Ucleus")
+//                }
+//            }
+//            .padding(.vertical)
+//            Link("Company Website", destination: defaultURL)
+//            Link("Terms of Services", destination: defaultURL)
+//            Link("Privacy Policy", destination: defaultURL)
+//            Link("Learn More", destination: defaultURL)
+//        }
+//    }
     
 }
