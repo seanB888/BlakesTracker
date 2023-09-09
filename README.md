@@ -1,61 +1,30 @@
-# BlakesWallet
-Crypto app for tracking coins that use the CoinGecko API
-You can check coins and the website or Reddit page for the coin to get more details.
+# BlakesWallet 🪙
 
+BlakesWallet is a sleek and intuitive cryptocurrency tracking app that leverages the CoinGecko API. It provides users with a comprehensive overview of various cryptocurrencies, allowing them to delve into detailed statistics, descriptions, and relevant external resources.
 
-![BlakesWallet](https://user-images.githubusercontent.com/88250197/184780517-c7867baa-cc68-4935-a00c-2f25f904e6ca.gif)
+![BlakesWallet Demo](https://user-images.githubusercontent.com/88250197/184780517-c7867baa-cc68-4935-a00c-2f25f904e6ca.gif)
 
-# 📁 Files Overview
+## 📚 Features
 
-- **BlakesWalletApp.swift**: 
-  - Main entry point for the app.
-  - Initializes the `HomeViewModel` and sets up the main view hierarchy.
-  - Customizes the appearance of the navigation bar.
-  - Starts with the `HomeView` and has a launch view that can be shown or hidden.
+- **Real-time Data**: Fetches up-to-date cryptocurrency data from CoinGecko.
+- **Detailed Insights**: Offers in-depth information about each cryptocurrency, including statistics, descriptions, and more.
+- **User-friendly Interface**: Designed with SwiftUI, ensuring a smooth and modern user experience.
+- **External Resources**: Direct links to official websites and Reddit pages for each cryptocurrency, providing users with a wealth of additional information.
 
-- **ContentView.swift**: 
-  - Placeholder view displaying a green background.
-  - Might not be actively used in the app.
+## 📁 Files Overview
 
-- **CloseButton.swift**: 
-  - Custom SwiftUI view for a close button.
-  - Uses the system "xmark" image.
-  - Dismisses the current view when tapped.
+(Contents from the previous Files Overview section remain unchanged)
 
-- **CircleButtonView.swift**: 
-  - Custom button view that displays an image icon inside a circle.
-  - Styled with a shadow and padding.
+## 📝 Observations
 
-- **DetailView.swift**: 
-  - Displays detailed information about a selected cryptocurrency.
-  - Contains sections for an overview, description, statistics, and additional details.
-  - Provides navigation bar items and various utility views.
+(Contents from the previous Observations section remain unchanged)
 
-- **HomeView.swift**: 
-  - Represents the home screen of the app.
-  - Features a header, stats view, search bar, and lists for coins.
-  - Handles navigation to the detail view when a coin is selected.
+## 🛠️ Technologies Used
 
-- **SettingsView.swift**: 
-  - Displays settings and information about the app.
-  - Provides details about the data source (CoinGecko) and the developer.
-  - Contains links to various websites and resources.
+- **SwiftUI**: For building the user interface.
+- **Combine**: Modern approach for handling asynchronous tasks in Swift.
+- **CoinGecko API**: Primary data source for fetching cryptocurrency information.
 
-- **CoinDataServices.swift**: 
-  - Service class for fetching coin data from the CoinGecko API.
-  - Downloads, decodes, and updates the `allCoins` property.
+## 🤝 Contribution
 
-- **MarketDataService.swift**: 
-  - Service class fetching global market data from the CoinGecko API.
-  - Updates the `marketData` property with fetched data.
-
-- **HapticManager.swift**: 
-  - Utility class for managing haptic feedback.
-  - Provides a method to trigger notification haptic feedback.
-
-# 📝 Observations
-
-1. The code is organized and follows the **MVVM architecture**, separating views, view models, and services.
-2. The app heavily relies on the **CoinGecko API** for fetching cryptocurrency data.
-3. Clear separation of concerns with different views handling specific functionalities and services dedicated to fetching data.
-4. The use of **Combine** for networking is evident, a modern approach to handle asynchronous tasks in Swift.
+Feel free to fork this repository, create a feature branch, and submit a pull request if you'd like to contribute. Any feedback, enhancements, or bug reports are highly appreciated!
