@@ -27,7 +27,6 @@
 		047BCD92283AC6B0003E0D23 /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BCD91283AC6B0003E0D23 /* MarketDataModel.swift */; };
 		047BCD94283ADCB4003E0D23 /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BCD93283ADCB4003E0D23 /* MarketDataService.swift */; };
 		048D565C282DB56B0045C348 /* BlakesWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D565B282DB56B0045C348 /* BlakesWalletApp.swift */; };
-		048D565E282DB56B0045C348 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D565D282DB56B0045C348 /* ContentView.swift */; };
 		048D5660282DB56F0045C348 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D565F282DB56F0045C348 /* Assets.xcassets */; };
 		048D5663282DB56F0045C348 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D5662282DB56F0045C348 /* Preview Assets.xcassets */; };
 		048D566B282DB8520045C348 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D566A282DB8520045C348 /* Color.swift */; };
@@ -74,7 +73,6 @@
 		047BCD93283ADCB4003E0D23 /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 		048D5658282DB56B0045C348 /* Blakes Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blakes Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		048D565B282DB56B0045C348 /* BlakesWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlakesWalletApp.swift; sourceTree = "<group>"; };
-		048D565D282DB56B0045C348 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		048D565F282DB56F0045C348 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048D5662282DB56F0045C348 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		048D566A282DB8520045C348 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 				045B61C82831E7D300579D38 /* Services */,
 				04D3AEEE28329BDE002A15BB /* Utilities */,
 				048D565B282DB56B0045C348 /* BlakesWalletApp.swift */,
-				048D565D282DB56B0045C348 /* ContentView.swift */,
 				048D565F282DB56F0045C348 /* Assets.xcassets */,
 				048D5661282DB56F0045C348 /* Preview Content */,
 			);
@@ -421,7 +418,6 @@
 				045B61C1282EB1C500579D38 /* CoinRowView.swift in Sources */,
 				1F9AC21A285ED05300B1A252 /* ChartView.swift in Sources */,
 				045B61C7282EFBBB00579D38 /* HomeViewModel.swift in Sources */,
-				048D565E282DB56B0045C348 /* ContentView.swift in Sources */,
 				048D5671282DBBDA0045C348 /* HomeView.swift in Sources */,
 				1F9AC21C286016A200B1A252 /* Date.swift in Sources */,
 				045B61CA2831E7EC00579D38 /* CoinDataServices.swift in Sources */,
