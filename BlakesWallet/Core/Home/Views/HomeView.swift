@@ -57,7 +57,8 @@ struct HomeView: View {
             NavigationLink(
                 destination: DetailLoadingView(coin: $selectedCoin),
                 isActive: $showDetailView,
-                label: {EmptyView()})
+                label: {EmptyView()}
+            )
         )
     }
 }
