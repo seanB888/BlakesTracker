@@ -1,6 +1,6 @@
 # Blake's Tracker 🪙
 
-BlakesWallet is a sleek and intuitive cryptocurrency tracking app that leverages the CoinGecko API. It provides users with a comprehensive overview of various cryptocurrencies, allowing them to delve into detailed statistics, descriptions, and relevant external resources.
+Blakes Tracker is a sleek and intuitive cryptocurrency tracking app that leverages the CoinGecko API. It provides users with a comprehensive overview of various cryptocurrencies, allowing them to delve into detailed statistics, descriptions, and relevant external resources.
 
 ![BlakesWallet Demo](https://user-images.githubusercontent.com/88250197/184780517-c7867baa-cc68-4935-a00c-2f25f904e6ca.gif)
 
